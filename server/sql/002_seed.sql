@@ -1,9 +1,9 @@
 SET search_path TO steam;
 
 INSERT INTO users (email, username, password_hash, country, friend_code, account_balance) VALUES
-('alice@example.com', 'aliceuser', '$2b$10$dummydummydummydummydummy111', 'US', 'ALC-123', 50),
-('bob@example.com', 'bobuser',  '$2b$10$dummydummydummydummydummy222', 'US', 'BOB-456', 20),
-('cara@example.com', 'carauser', '$2b$10$dummydummydummydummydummy333', 'CA', 'CAR-789', 10);
+('alice@example.com', 'aliceuser', 'alicepass', 'US', 'ALC-123', 50),
+('bob@example.com', 'bobuser',  'bobpass', 'US', 'BOB-456', 20),
+('cara@example.com', 'carauser', 'carapass', 'CA', 'CAR-789', 10);
 
 INSERT INTO developers (name,country) VALUES ('Valve','US'), ('Black Mesa Devs','US');
 
