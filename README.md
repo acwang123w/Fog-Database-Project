@@ -1,9 +1,12 @@
+# README.md
+## Overview
 This is the application setup for our 412 semester project.
 For this project, we have decided to create a game library application, which stores and manipulates game and user information using a PostgreSQL database.
 It contains a login page, a register page, an admin view page, and a user view page.
 
 For the database design, our database we designed and used for phases 1 and 2 of the project worked nearly flawlessly. There were only 1-2 minor adjustments to the structural constraints.
 
+### Login Page and User View
 The login page checks user accounts to see if they exist in the database. Once logged in, the user is presented with their library page, consisting of all the games they have purchased. From here, 
 they can click on the games to view the game details. User info is additionally stored client side using cookies, so if the page is refreshed, it will keep the user logged in instead of bringing them
 back to the login screen.
@@ -22,3 +25,17 @@ The next tab is the profile tab. From here, users can view their account info an
 to add funds to the user's balance. The user's balance is displayed here in addition to the right part of the navbar.
 
 The rightmost and final element of the navbar is the logout button. This button logs the user out.
+
+### Register Page
+Users are able to create accounts through this Register page. Users are asked to input their username, email, Country/Region, and password twice for confirmation. After registering, an account for the 
+user is created in the database. Each user has a unique ID within the database, as well as a unique friendcode through which they can use to add other users.
+
+### Admin Page
+The primary use of this page is to provide functionality for viewing user info (in case if demo account information is lost/forgotten), making achievements for games, and granting achievements to
+players (this is currently the only way for users to "earn" achievements). The two main tabs list all users and all games within the database. Clicking on a an account will bring up all relevant 
+information for that account. The library tab allows deletion of games from a user's account (to make testing easier), as well as granting achievements from each game to the user.
+
+The games tab lists all games, and opening up a game will allow the admin to create and remove achievements for each game.
+
+### Ending
+Thank you to Professor Zhou and TA's!
