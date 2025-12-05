@@ -39,24 +39,44 @@ The games tab lists all games, and opening up a game will allow the admin to cre
 
 ### Running the project
 1. Ensure navigate into the directories for server and client and run npm install in each
-2. Create local PostGreSQL database by running: createdb fog_db
-3. (Optional) You can verify the db existence by running: psql -d fog_db
-4. Modify the .env file to include the following content
-  PGHOST=localhost
-  PGPORT=YOUR_PORT
-  PGDATABASE=fog_db
-  PGUSER=YOUR_USER_HERE
-  PGPASSWORD=YOUR_PASSWORD
-  PORT=5174
-5. You can initialize the database by running the following commands:
+2. Create local PostGreSQL database by running:
+   ```bash
+   createdb fog_db
+4. (Optional) You can verify the db existence by running:
+   ```bash
+   psql -d fog_db
+6. Modify the .env file to include the following content
+   ```bash
+   PGHOST=localhost
+   PGPORT=YOUR_PORT
+   PGDATABASE=fog_db
+   PGUSER=YOUR_USER_HERE
+   PGPASSWORD=YOUR_PASSWORD
+   PORT=5174
+   ```
+8. You can initialize the database by running the following commands:
+   ```bash
    cd server/sql
    psql -h localhost -p YOUR_PORT -U YOUR_USER_HERE -d fog_db -f 001_schema.sql
    psql -h localhost -p YOUR_PORT -U YOUR_USER_HERE -d fog_db -f 002_seed.sql
    psql -h localhost -p YOUR_PORT -U YOUR_USER_HERE -d fog_db -f 003_extra_seed.sql
-6. Now run the frontend and backend
-   navigate to the server folder and do: npm run dev
-   navigate to the client folder and do: npm run dev
-7. Now, you can access the application through here!
+   ```
+10. Now run the frontend and backend:
+
+    Navigate to the server folder and run:
+
+    ```bash
+    npm run dev
+    ```
+
+    Navigate to the client folder and run:
+
+    ```bash
+    npm run dev
+    ```
+
+12. Now, you can access the application through here!
+    
     [http://localhost:5173/](http://localhost:5173/)
    
 ### Ending
