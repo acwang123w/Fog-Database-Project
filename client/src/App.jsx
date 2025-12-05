@@ -97,7 +97,7 @@ export default function App() {
   return (
     <div>
       <Header user={user} onNav={go} onLogout={handleLogout} />
-      <div className="max-w-6xl mx-auto px-4 py-6">
+      <div className="max-w-6xl mx-auto px-4 py-6 pt-20">
         {route.name === 'home'    && <Home userId={user.user_id} onOpenGame={(id)=>go('game',{id})} />}
         {route.name === 'game'    && <GameDetail id={route.params.id} userId={user.user_id} userBalance={user.account_balance} onBack={()=>go('home')} onPurchaseSuccess={handlePurchaseSuccess} />}
         {route.name === 'library' && <Library userId={user.user_id} onOpenGame={(id)=>go('game',{id})} />}

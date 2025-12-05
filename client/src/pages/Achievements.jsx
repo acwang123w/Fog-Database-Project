@@ -22,9 +22,17 @@ const PageHeader = ({ isViewingOther, viewingUser, onNav }) => (
   </div>
 );
 
-const EmptyState = ({ isViewingOther, viewingUser }) => (
+const EmptyState = ({ isViewingOther, viewingUser, onNav }) => (
   <div>
     <h1 className="text-3xl font-bold text-white mb-6">Achievements</h1>
+    {isViewingOther && onNav && (
+      <button
+        onClick={() => onNav('friends')}
+        className="mb-4 text-slate-400 hover:text-white transition text-sm"
+      >
+        ← Back to Friends
+      </button>
+    )}
     <p className="text-slate-400">
       {isViewingOther 
         ? `${viewingUser?.username} doesn't own any games with achievements yet.` 
@@ -114,7 +122,7 @@ export default function AchievementsPage({ userId, viewingUserId, onNav }) {
   const gameIds = getSortedGameIds();
 
   if (gameIds.length === 0) {
-    return <EmptyState isViewingOther={isViewingOther} viewingUser={viewingUser} />;
+    return <EmptyState isViewingOther={isViewingOther} viewingUser={viewingUser} onNav={onNav} />;
   }
 
   return (
