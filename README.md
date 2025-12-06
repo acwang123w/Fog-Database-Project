@@ -1,7 +1,7 @@
 # README.md
 ## Overview
 This is the application setup for our 412 semester project.
-For this project, we have decided to create a game library application, which stores and manipulates game and user information using a PostgreSQL database.
+For this project, we have decided to create a Steam-inspired game library application, which stores and manipulates game and user information using a PostgreSQL database.
 It contains a login page, a register page, an admin view page, and a user view page.
 
 For the database design, our database we designed and used for phases 1 and 2 of the project worked nearly flawlessly. There were only 1-2 minor adjustments to the structural constraints.
